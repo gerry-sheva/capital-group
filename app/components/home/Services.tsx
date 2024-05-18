@@ -15,11 +15,11 @@ const Services = () => {
 		setMainAnimation(animation)
 	}
 	return (
-		<section className="grid grid-cols-7 py-20 gap-12">
+		<section className="grid lg:grid-cols-7 py-10 lg:py-20 gap-12">
 			<div className="col-span-3">
 				<div>
-					<h3 className="text-5xl">Service Pillars</h3>
-					<p className="my-10">
+					<h3 className="text-4xl lg:text-5xl">Service Pillars</h3>
+					<p className="my-5 lg:my-10">
 						Success comes from building true partnerships with our clients, so
 						we work as an extension of your team.
 					</p>
@@ -27,7 +27,7 @@ const Services = () => {
 				</div>
 				{/* Lottie container */}
 				{mainAnimation && (
-					<div className="mt-20">
+					<div className="hidden lg:block lg:mt-20">
 						<Lottie
 							animationData={mainAnimation}
 							loop
@@ -39,13 +39,13 @@ const Services = () => {
 				{DATA.map((service, index) => (
 					<div
 						key={index}
-						className="flex items-center justify-between h-32 text-3xl border-b-[1px] first:border-t-[1px]"
+						className="flex items-center justify-between h-24 lg:h-32 text-3xl border-b-[1px] first:border-t-[1px]"
 						onMouseEnter={() => handleSetMainAnimation(service.lottie)}
-						// onMouseLeave={() => handleSetMainAnimation(null)}
+						onMouseLeave={() => handleSetMainAnimation(null)}
 					>
-						<div className="flex gap-4">
+						<div className="flex gap-4 items-center">
 							<p>{service.num}</p>
-							<p>{service.service}</p>
+							<p className="text-xl lg:text-3xl">{service.service}</p>
 						</div>
 						<div className="w-16 h-16 flex items-center">
 							<Lottie
