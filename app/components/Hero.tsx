@@ -5,7 +5,7 @@ interface HeroProps {
 }
 const Hero: React.FC<HeroProps> = ({ children }) => {
 	return (
-		<section className="py-4 lg:py-8 border-b-[1px]">
+		<section className="py-6 lg:py-8 border-b-[1px]">
 			<div className="hidden lg:flex gap-32 text-[.75vw] mb-24">
 				<div>
 					<p>N 38°53&apos;2.40&quot;</p>

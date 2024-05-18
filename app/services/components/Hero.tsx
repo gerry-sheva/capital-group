@@ -3,12 +3,12 @@ import Hero from '../../components/Hero'
 const HeroServices: React.FC = () => {
 	return (
 		<Hero>
-			<h1 className="text-7xl my-16">
+			<h1 className="text-5xl lg:text-7xl mb-8 lg:my-16">
 				RESULTS DRIVEN. MAKING THE
 				<br />
 				UNACHIEVABLE, ACHIEVABLE.
 			</h1>
-			<h2 className="text-xl">
+			<h2 className="text-lg lg:text-xl">
 				Transforming ambitious goals into
 				<br />
 				real-world achievements.
