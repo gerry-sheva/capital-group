@@ -1,7 +1,7 @@
 const About: React.FC = () => {
 	return (
-		<section className="py-20 border-b-[1px]">
-			<div className="flex flex-col gap-10 text-5xl leading-[1.125]">
+		<section className="py-10 lg:py-20 border-b-[1px]">
+			<div className="flex flex-col gap-10 text-2xl lg:text-5xl leading-[1.125]">
 				<p>
 					Capital Group is a management consulting firm with more than a decade
 					of experience in providing effective and innovative consulting
