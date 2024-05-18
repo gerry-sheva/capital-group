@@ -13,14 +13,14 @@ const About: React.FC = () => {
 				</p>
 			</div>
 			<div className="col-span-1 flex flex-col">
-				<div className="mb-5 lg:mb-10">
+				<div className="mb-5 self-center text-center lg:mb-10">
 					<p className="text-[8rem] lg:text-[12rem] leading-none">$1B+</p>
 					<p className="text-sm">
 						Supporting Government and Commercial Programs Ranging from $10M –
 						$1B+
 					</p>
 				</div>
-				<div className="flex justify-evenly lg:justify-between gap-4 flex-wrap">
+				<div className="flex justify-evenly md:justify-between gap-4 flex-wrap">
 					<div className="flex flex-col items-center">
 						<p className="text-6xl pb-3">98%</p>
 						<p className="text-xs">Employee Retention Rate</p>
