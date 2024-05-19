@@ -10,11 +10,6 @@ const HeroLeadership: React.FC = () => {
 				<br />
 				THE EXTRAORDINARY.
 			</h1>
-			<h2 className="text-xl">
-				Empowering dreams,
-				<br />
-				one bold idea at a time
-			</h2>
 		</Hero>
 	)
 }
