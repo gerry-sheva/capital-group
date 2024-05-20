@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import Hero from '../Hero'
 import { Suspense, useState } from 'react'
-import { list } from '@vercel/blob'
 
 const HeroHome: React.FC = () => {
 	const [isHovering, setIsHovering] = useState<boolean>(false)
@@ -37,12 +36,6 @@ const HeroHome: React.FC = () => {
 						preload="auto"
 					/>
 				</Suspense>
-				{/* <Image
-					src={'/hero.webp'}
-					width={1280}
-					height={720}
-					alt="hero image"
-				/> */}
 				{isHovering && (
 					<div className="hidden lg:block absolute top-0 bg-black/40 w-full h-full">
 						<h1 className="text-4xl lg:text-7xl my-8 lg:my-16">
@@ -69,30 +62,3 @@ const HeroHome: React.FC = () => {
 }
 
 export default HeroHome
-
-// async function VideoComponent({ fileName }: { fileName: any }) {
-// 	const { blobs } = await list({
-// 		prefix: fileName,
-// 		limit: 1,
-// 	})
-// 	// console.log(blobs)
-// 	const { url } = blobs[0]
-
-// 	return (
-// 		<video
-// 			controls
-// 			preload="auto"
-// 			aria-label="Video player"
-// 			autoPlay
-// 			muted
-// 			loop
-// 			disablePictureInPicture
-// 		>
-// 			<source
-// 				src={url}
-// 				type="video/mp4"
-// 			/>
-// 			Your browser does not support the video tag.
-// 		</video>
-// 	)
-// }
