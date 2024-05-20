@@ -40,7 +40,7 @@ const HeroHome: React.FC = () => {
 
 export default HeroHome
 
-async function VideoComponent({ fileName }) {
+async function VideoComponent({ fileName }: { fileName: any }) {
 	const { blobs } = await list({
 		prefix: fileName,
 		limit: 1,
@@ -53,6 +53,7 @@ async function VideoComponent({ fileName }) {
 			controls
 			preload="none"
 			aria-label="Video player"
+			autoPlay
 		>
 			<source
 				src={url}
