@@ -3,7 +3,7 @@ import Hero from '@/app/components/Hero'
 const HeroAboutUs: React.FC = () => {
 	return (
 		<Hero>
-			<h1 className="text-5xl lg:text-7xl mb-8 lg:my-16">
+			<h1 className="text-5xl lg:text-7xl">
 				COMMITTED TO EXCELLENCE.
 				<br />
 				TURNING VISIONS INTO REALITY.

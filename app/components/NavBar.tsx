@@ -1,5 +1,6 @@
 'use client'
 import { Menu } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
@@ -42,16 +43,42 @@ const NavBar: React.FC = () => {
 			<nav className={`max-h-screen ${!show && 'hidden'} max-w-screen`}>
 				<div className="h-[15vh] flex items-center gap-6 mx-[5vw] border-b-2 border-b-white">
 					<Menu onClick={handleShowMenu} />
-					<h1 className="text-4xl">Capital Group</h1>
+					<Image
+						src="/logo.svg"
+						alt="logo"
+						width={200}
+						height={100}
+						className="text-white"
+					/>
 				</div>
 				{/* dropdown */}
 				{showMenu && (
 					<div className="h-[85vh] z-10">
 						<div className="text-2xl h-full flex flex-col gap-10 mx-[5vw] justify-center">
-							<Link href={'/aboutus'}>About Us</Link>
-							<Link href={'/services'}>Services</Link>
-							<Link href={'/leadership'}>Leadership</Link>
-							<Link href={'/consultant'}>Consultant</Link>
+							<Link
+								onClick={handleShowMenu}
+								href={'/aboutus'}
+							>
+								About Us
+							</Link>
+							<Link
+								onClick={handleShowMenu}
+								href={'/services'}
+							>
+								Services
+							</Link>
+							<Link
+								onClick={handleShowMenu}
+								href={'/leadership'}
+							>
+								Leadership
+							</Link>
+							<Link
+								onClick={handleShowMenu}
+								href={'/consultant'}
+							>
+								Consultant
+							</Link>
 						</div>
 					</div>
 				)}
@@ -60,7 +87,14 @@ const NavBar: React.FC = () => {
 	}
 	return (
 		<nav className="flex justify-between items-center h-[10vh] mx-[5vw] border-b-2 border-b-white">
-			<h1>Capital Group</h1>
+			<Link href={'/'}>
+				<Image
+					src="/logo.svg"
+					alt="logo"
+					width={200}
+					height={100}
+				/>
+			</Link>
 			<div className="flex gap-4">
 				<Link href={'/aboutus'}>About Us</Link>
 				<Link href={'/services'}>Services</Link>
