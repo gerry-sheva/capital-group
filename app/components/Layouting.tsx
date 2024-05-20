@@ -38,7 +38,7 @@ export const NavBar: React.FC = () => {
 
 	if (!isDesktop) {
 		return (
-			<nav className={`max-h-screen fixed bg-red-500 ${!show && 'hidden'}`}>
+			<nav className={`max-h-screen ${!show && 'hidden'}`}>
 				<div className="h-[15vh] flex items-center gap-6 mx-[5vw] border-b-2 border-b-white">
 					<Menu onClick={handleShowMenu} />
 					<h1 className="text-4xl">Capital Group</h1>
