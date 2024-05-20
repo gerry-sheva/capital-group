@@ -13,7 +13,7 @@ const CTA: React.FC = () => {
 					Celebrating a decade of thought leadership, innovation and client
 					partnerships.
 				</p>
-				<PrimaryButton></PrimaryButton>
+				<PrimaryButton link="/aboutus">Learn More</PrimaryButton>
 			</div>
 		</section>
 	)

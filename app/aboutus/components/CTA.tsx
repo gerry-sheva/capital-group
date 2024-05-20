@@ -10,7 +10,7 @@ const CTA: React.FC = () => {
 				These values define Capital Group consultants. If they apply to you and
 				your needs, let&apos;s chat.
 			</p>
-			<PrimaryButton />
+			<PrimaryButton link="tel:+12027548500">Contact Us</PrimaryButton>
 		</section>
 	)
 }

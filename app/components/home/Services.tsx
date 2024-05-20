@@ -23,7 +23,7 @@ const Services = () => {
 						Success comes from building true partnerships with our clients, so
 						we work as an extension of your team.
 					</p>
-					<PrimaryButton />
+					<PrimaryButton link="/services">Learn More</PrimaryButton>
 				</div>
 				{/* Lottie container */}
 				{mainAnimation && (
