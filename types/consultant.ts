@@ -1,6 +1,7 @@
 export interface ConsultantOverview {
 	name: string
 	id: string
+	img: string
 }
 
 export interface Consultant {
@@ -8,4 +9,5 @@ export interface Consultant {
 	telephone: string
 	email: string
 	overview: string
+	img: string
 }

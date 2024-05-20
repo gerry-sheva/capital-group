@@ -14,6 +14,7 @@ const useConsultantsList = () => {
 		const consultants = data.items.map((item: any) => ({
 			name: item.fields.name,
 			id: item.fields.consultant.sys.id,
+			img: item.fields.img,
 		}))
 		setConsultantsList(consultants)
 	}, [])

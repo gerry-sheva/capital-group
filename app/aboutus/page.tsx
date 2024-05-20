@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
 		<main className="min-h-screen mx-[5vw]">
 			<HeroAboutUs />
 			<About />
-			{/* <History /> */}
+			<History />
 			<CTA />
 		</main>
 	)

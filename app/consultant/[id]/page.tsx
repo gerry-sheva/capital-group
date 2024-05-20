@@ -17,7 +17,7 @@ const Page: React.FC<ConsultantProps> = ({ params }) => {
 		<div>
 			<div className="relative">
 				<Image
-					src={'/jon.jpeg'}
+					src={`/${consultant?.img}1.webp`}
 					width={1280}
 					height={640}
 					alt="Consultant Image"
