@@ -69,12 +69,6 @@ const NavBar: React.FC = () => {
 							</Link>
 							<Link
 								onClick={handleShowMenu}
-								href={'/leadership'}
-							>
-								Leadership
-							</Link>
-							<Link
-								onClick={handleShowMenu}
 								href={'/consultant'}
 							>
 								Consultant
@@ -98,7 +92,6 @@ const NavBar: React.FC = () => {
 			<div className="flex gap-4">
 				<Link href={'/aboutus'}>About Us</Link>
 				<Link href={'/services'}>Services</Link>
-				<Link href={'/leadership'}>Leadership</Link>
 				<Link href={'/consultant'}>Consultant</Link>
 			</div>
 		</nav>
