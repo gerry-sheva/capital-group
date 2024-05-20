@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
-export const NavBar: React.FC = () => {
+const NavBar: React.FC = () => {
 	const [show, setShow] = useState<boolean>(true)
 	const [showMenu, setShowMenu] = useState<boolean>(false)
 	const [lastScrollY, setLastScrollY] = useState<number>(0)
@@ -70,3 +70,5 @@ export const NavBar: React.FC = () => {
 		</nav>
 	)
 }
+
+export default NavBar
