@@ -3,6 +3,7 @@ import { ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
 import { useEffect, useLayoutEffect, useRef } from 'react'
 import Image from 'next/image'
+import { useMediaQuery } from 'react-responsive'
 
 const useIsomorphicLayoutEffect =
 	typeof window !== 'undefined' ? useLayoutEffect : useEffect
@@ -10,6 +11,7 @@ const useIsomorphicLayoutEffect =
 gsap.registerPlugin(ScrollTrigger)
 
 const History: React.FC = () => {
+	const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' })
 	const horizontalSection = useRef<HTMLDivElement>(null)
 
 	useIsomorphicLayoutEffect(() => {
@@ -29,6 +31,87 @@ const History: React.FC = () => {
 		}, horizontalSection)
 		return () => ctx.revert()
 	}, [])
+
+	if (!isDesktop) {
+		return (
+			<section className="w-full flex flex-col gap-20 py-10">
+				<div className="h-full w-full">
+					<div className="flex flex-col justify-between">
+						<div className="text-5xl">
+							<h2>Humble Beginnings.</h2>
+							<h2>2018</h2>
+						</div>
+						<p>Capital Group was founded on one rainy day in November 2018</p>
+					</div>
+					<div>
+						<Image
+							src={'/history_1.webp'}
+							width={600}
+							height={400}
+							alt="founding"
+						/>
+					</div>
+				</div>
+				<div className="h-full w-full">
+					<div>
+						<Image
+							src={'/history_2.webp'}
+							width={600}
+							height={400}
+							alt="founding"
+						/>
+					</div>
+					<div className="flex flex-col justify-between">
+						<p>Capital Group secured 6 new commercial clients</p>
+						<div className="text-5xl">
+							<h2>Unprecedented Luck.</h2>
+							<h2>2019</h2>
+						</div>
+					</div>
+				</div>
+				<div className="h-full w-full flex flex-col items-center">
+					<div>
+						<Image
+							src={'/history_4.webp'}
+							width={600}
+							height={400}
+							alt="founding"
+						/>
+					</div>
+					<div className="flex flex-col justify-between">
+						<p>
+							Despite economic slowdown from the global pandemy, our resilience
+							still came up on top
+						</p>
+						<div className="text-5xl">
+							<h2>Dubs After Dubs...</h2>
+							<h2>2020 - 2022</h2>
+						</div>
+					</div>
+				</div>
+				<div className="h-full w-full">
+					<div className="flex flex-col justify-center">
+						<p>
+							With more than $3B saved, Capital Group had established itself as
+							THE management consultancy firm
+						</p>
+						<div className="text-5xl">
+							<h2>... Fat Ws after Fat Ws</h2>
+							<h2>2023 - beyond</h2>
+						</div>
+					</div>
+					<div>
+						<Image
+							src={'/history_5.webp'}
+							width={600}
+							height={400}
+							alt="founding"
+						/>
+					</div>
+				</div>
+			</section>
+		)
+	}
 
 	return (
 		<section
