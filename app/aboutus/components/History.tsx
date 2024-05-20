@@ -35,8 +35,8 @@ const History: React.FC = () => {
 	if (!isDesktop) {
 		return (
 			<section className="w-full flex flex-col gap-20 py-10">
-				<div className="h-full w-full">
-					<div className="flex flex-col justify-between">
+				<div className="h-full w-full flex flex-col gap-6">
+					<div className="flex flex-col justify-between gap-2">
 						<div className="text-5xl">
 							<h2>Humble Beginnings.</h2>
 							<h2>2018</h2>
@@ -52,7 +52,7 @@ const History: React.FC = () => {
 						/>
 					</div>
 				</div>
-				<div className="h-full w-full">
+				<div className="h-full w-full flex flex-col items-center gap-6">
 					<div>
 						<Image
 							src={'/history_2.webp'}
@@ -61,7 +61,7 @@ const History: React.FC = () => {
 							alt="founding"
 						/>
 					</div>
-					<div className="flex flex-col justify-between">
+					<div className="flex flex-col justify-between gap-2">
 						<p>Capital Group secured 6 new commercial clients</p>
 						<div className="text-5xl">
 							<h2>Unprecedented Luck.</h2>
@@ -69,7 +69,7 @@ const History: React.FC = () => {
 						</div>
 					</div>
 				</div>
-				<div className="h-full w-full flex flex-col items-center">
+				<div className="h-full w-full flex flex-col items-end gap-6">
 					<div>
 						<Image
 							src={'/history_4.webp'}
@@ -78,7 +78,7 @@ const History: React.FC = () => {
 							alt="founding"
 						/>
 					</div>
-					<div className="flex flex-col justify-between">
+					<div className="flex flex-col justify-between gap-2">
 						<p>
 							Despite economic slowdown from the global pandemy, our resilience
 							still came up on top
@@ -89,8 +89,8 @@ const History: React.FC = () => {
 						</div>
 					</div>
 				</div>
-				<div className="h-full w-full">
-					<div className="flex flex-col justify-center">
+				<div className="h-full w-full flex flex-col items-center gap-6">
+					<div className="flex flex-col justify-center gap-2">
 						<p>
 							With more than $3B saved, Capital Group had established itself as
 							THE management consultancy firm
