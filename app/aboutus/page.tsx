@@ -6,7 +6,7 @@ import President from './components/President'
 
 const AboutUs: React.FC = () => {
 	return (
-		<main className="min-h-screen mx-[5vw]">
+		<main className="min-h-screen mx-[5vw] overflow-hidden">
 			<HeroAboutUs />
 			<About />
 			<President />

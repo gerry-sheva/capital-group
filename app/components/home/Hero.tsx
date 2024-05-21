@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Hero from '../Hero'
 import { Suspense, useState } from 'react'
 import { motion, stagger } from 'framer-motion'
+import { PrimaryButton } from '../Buttons'
 
 const HeroHome: React.FC = () => {
 	const [isHovering, setIsHovering] = useState<boolean>(false)
@@ -38,7 +39,12 @@ const HeroHome: React.FC = () => {
 					/>
 				</Suspense>
 				{isHovering && (
-					<div className="hidden lg:block absolute top-0 bg-black/40 w-full h-full">
+					<motion.div
+						className="hidden lg:block absolute top-0 bg-black/40 w-full h-full"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 0.25 }}
+					>
 						<motion.h1
 							className="text-4xl lg:text-7xl my-8 lg:my-16"
 							initial={{ opacity: 0, y: 50 }}
@@ -51,21 +57,22 @@ const HeroHome: React.FC = () => {
 							<br />
 							CAPITAL GROUP DELIVERS.
 						</motion.h1>
-						<div className="flex flex-col-reverse lg:flex-row lg:items-center gap-8 lg:gap-12">
-							<motion.h2
-								className="text-xl"
-								initial={{ opacity: 0, y: 50 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.5, delay: 0.1 }}
-							>
+						<motion.div
+							className="flex flex-col lg:items-start gap-8"
+							initial={{ opacity: 0, y: 50 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, delay: 0.1 }}
+						>
+							<h2 className="text-xl">
 								Analyze. Plan. Execute.
 								<br />
 								Combining innovation and ingenuity
 								<br />
 								to achieve stellar results.
-							</motion.h2>
-						</div>
-					</div>
+							</h2>
+							<PrimaryButton link="/services">Learn More</PrimaryButton>
+						</motion.div>
+					</motion.div>
 				)}
 			</div>
 		</Hero>
