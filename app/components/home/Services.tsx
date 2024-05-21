@@ -5,6 +5,7 @@ import { Service } from '@/app/type'
 import Lottie from 'lottie-react'
 import { useState } from 'react'
 import { PrimaryButton } from '../Buttons'
+import { motion } from 'framer-motion'
 
 const DATA: Service[] = services
 
@@ -27,12 +28,17 @@ const Services = () => {
 				</div>
 				{/* Lottie container */}
 				{mainAnimation && (
-					<div className="hidden lg:block lg:mt-20">
+					<motion.div
+						className="hidden lg:block lg:mt-20"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 1 }}
+					>
 						<Lottie
 							animationData={mainAnimation}
 							loop
 						/>
-					</div>
+					</motion.div>
 				)}
 			</div>
 			<div className="col-span-4 flex flex-col gap-2">
