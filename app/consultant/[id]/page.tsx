@@ -21,7 +21,7 @@ const Page: React.FC<ConsultantProps> = ({ params }) => {
 					width={1280}
 					height={640}
 					alt="Consultant Image"
-					className=" h-[90vh] object-cover object-top"
+					className=" h-[90vh] w-screen object-cover object-top"
 				/>
 				<div className="absolute bottom-0  px-[5vw]">
 					<h1 className="text-6xl">{consultant?.name}</h1>
