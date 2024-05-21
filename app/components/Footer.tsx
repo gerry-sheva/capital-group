@@ -12,11 +12,11 @@ const Footer: React.FC = () => {
 				<p>Washington, DC 20024</p>
 			</div>
 			<div className="flex gap-6">
-				<div>
+				<div className="flex flex-col">
 					<Link href={'instagram.com'}>Instagram</Link>
 					<Link href={'linkedin.com'}>LinkedIn</Link>
 				</div>
-				<div>
+				<div className="flex flex-col">
 					<Link href={'x.com'}>Twitter</Link>
 					<Link href={'indeed.com'}>Indeed</Link>
 				</div>
