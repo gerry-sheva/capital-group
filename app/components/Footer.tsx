@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const Footer: React.FC = () => {
 	return (
 		<footer className="px-[5vw] py-12 flex flex-col lg:flex-row lg:justify-between gap-6 border-t-[1px]">
@@ -11,12 +13,12 @@ const Footer: React.FC = () => {
 			</div>
 			<div className="flex gap-6">
 				<div>
-					<p>Instagram</p>
-					<p>LinkedIn</p>
+					<Link href={'instagram.com'}>Instagram</Link>
+					<Link href={'linkedin.com'}>LinkedIn</Link>
 				</div>
 				<div>
-					<p>Twitter</p>
-					<p>Indeed</p>
+					<Link href={'x.com'}>Twitter</Link>
+					<Link href={'indeed.com'}>Indeed</Link>
 				</div>
 			</div>
 		</footer>
