@@ -1,5 +1,4 @@
 import About from './components/About'
-import CTA from './components/CTA'
 import HeroAboutUs from './components/Hero'
 import History from './components/History'
 import President from './components/President'
@@ -11,7 +10,6 @@ const AboutUs: React.FC = () => {
 			<About />
 			<President />
 			<History />
-			{/* <CTA /> */}
 		</main>
 	)
 }
