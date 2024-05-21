@@ -11,7 +11,7 @@ const AboutUs: React.FC = () => {
 			<About />
 			<President />
 			<History />
-			<CTA />
+			{/* <CTA /> */}
 		</main>
 	)
 }

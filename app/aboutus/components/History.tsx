@@ -24,7 +24,7 @@ const History: React.FC = () => {
 					trigger: horizontalSection.current,
 					pin: true,
 					start: 'top top',
-					end: '+=300%',
+					end: '+=400%',
 					scrub: 0.5,
 				},
 			})
