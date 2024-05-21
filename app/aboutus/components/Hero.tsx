@@ -1,3 +1,4 @@
+'use client'
 import Hero from '@/app/components/Hero'
 import { motion } from 'framer-motion'
 
