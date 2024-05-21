@@ -43,11 +43,15 @@ const Services = () => {
 			</div>
 			<div className="col-span-4 flex flex-col gap-2">
 				{DATA.map((service, index) => (
-					<div
+					<motion.div
 						key={index}
 						className="flex items-center justify-between h-24 lg:h-32 text-3xl border-b-[1px] first:border-t-[1px]"
 						onMouseEnter={() => handleSetMainAnimation(service.lottie)}
 						onMouseLeave={() => handleSetMainAnimation(null)}
+						initial={{ opacity: 0, y: 50 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 1 }}
+						viewport={{ once: true }}
 					>
 						<div className="flex gap-4 items-center">
 							<p>{service.num}</p>
@@ -59,7 +63,7 @@ const Services = () => {
 								loop
 							/>
 						</div>
-					</div>
+					</motion.div>
 				))}
 			</div>
 		</section>
