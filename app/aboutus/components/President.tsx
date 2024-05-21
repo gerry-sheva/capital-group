@@ -1,8 +1,16 @@
+'use client'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const President: React.FC = () => {
 	return (
-		<section className="lg:grid lg:grid-cols-9 gap-10 py-20 border-b-[1px]">
+		<motion.section
+			className="lg:grid lg:grid-cols-9 gap-10 py-20 border-b-[1px]"
+			initial={{ opacity: 0, y: 50 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ duration: 1 }}
+			viewport={{ once: true }}
+		>
 			<div className="col-span-4">
 				<Image
 					src={'/prez.webp'}
@@ -33,7 +41,7 @@ const President: React.FC = () => {
 					become one of our greatest assets.&quot;
 				</p>
 			</div>
-		</section>
+		</motion.section>
 	)
 }
 
