@@ -11,7 +11,7 @@ const useIsomorphicLayoutEffect =
 gsap.registerPlugin(ScrollTrigger)
 
 const History: React.FC = () => {
-	const isDesktop = useMediaQuery({ query: '(min-width: 960px)' })
+	const isDesktop = useMediaQuery({ query: '(min-width: 720px)' })
 	const horizontalSection = useRef<HTMLDivElement>(null)
 
 	useIsomorphicLayoutEffect(() => {
